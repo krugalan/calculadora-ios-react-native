@@ -1,4 +1,6 @@
-package com.calculadora;
+// package com.calculadora;
+package com.krugit.calculadoraiosreactnative;
+
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;

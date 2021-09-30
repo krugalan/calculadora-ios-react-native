@@ -1,4 +1,5 @@
-package com.calculadora;
+// package com.calculadora;
+package com.krugit.calculadoraiosreactnative;
 
 // react-native-splash-screen >= 0.3.1
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
