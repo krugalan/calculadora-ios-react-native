@@ -7,7 +7,7 @@ enum Operadores {
 
 
 export const useCalculadora = () => {
-
+    const [operacion, setOperacion] = useState('')
     const [numero, setNumero] = useState('0');
     const [numeroAnterior, setNumeroAnterior] = useState('0');
 
@@ -20,11 +20,13 @@ export const useCalculadora = () => {
     }
 
     const armarNumero = (numeroTexto: string) => {
+        console.log("numero: " + numero)
+        console.log("numeroTexto: " + numeroTexto)
+        
         // no aceptar doble punto
         if (numero.includes('.') && numeroTexto === '.') return;
 
         if (numero.startsWith('0') || numero.startsWith('-0')) {
-
             // Punto decimal
             if (numeroTexto === '.') {
                 setNumero(numero + numeroTexto)
@@ -43,6 +45,7 @@ export const useCalculadora = () => {
             } else {
                 setNumero(numero + numeroTexto);
             }
+
         } else {
             setNumero(numero + numeroTexto);
         }
@@ -131,7 +134,7 @@ export const useCalculadora = () => {
         // Variables
         numero,
         numeroAnterior,
-        
+
         // funciones
         limpiar,
         borrarNumero,
